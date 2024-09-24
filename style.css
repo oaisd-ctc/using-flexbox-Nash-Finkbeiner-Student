@@ -1,3 +1,4 @@
+/* This is to make the borders of the boxes show */
 #con{
     display: flex;
     height:200px;
@@ -5,20 +6,21 @@
     justify-content:center;
     flex-direction: column;
 }
-
+/* This is to shape and color all the items in box 1 */
 #con>div{
     display: flex;
     margin: 10px;
     background-color:aquamarine;
 }
-
+/* This is do the border for contanier 2 */
 #con2{
     display: flex;
     height:400px;
     border:solid black 10px;
     justify-content:center;
 }
-
+/* The text in here first create the box which the text for item 6 is held in and then moves 
+it to the center while appling a transition to it so when ever it moves back to a defult state it takes 2 seconds.*/
 #con2>div{
     height:200px;
     width:200px;
@@ -26,7 +28,10 @@
     margin-top: 10px;
     background-color:aquamarine;
     align-self:center;
+    justify-content:center;
+    transition:2s;
 }
+/* This is the main hover system which is used to make it so the items in container 1 grow, change color of the box, and change the color of the text. */
 #con>div:hover{
     background-color:blue;
     height:50px;
@@ -34,8 +39,27 @@
     color:yellow;
     font-size:20px;
 }
+/* This hover is for the div in container 2 which makes it grow to nearly fill the conatiner and 
+change both the color of the text and box while growing the text along with the box. */
 #con2>div:hover{
-    height: 350px;
-    width: 1000px;
+    height: 95%;
+    width: 95%;
+    background-color:yellow;
+    font-size:300%;
     transition:3s;
+    color:blue;
+}
+/* This nth-child makes every even item a diffrent starting color */
+#con>div:nth-child(2n){
+    display: flex;
+    margin: 10px;
+    background-color:green;
+}
+/* This is to make sure the even ones still become the same thing as the odss when hovered over */
+#con>div:nth-child(2n):hover{
+    background-color:blue;
+    height:50px;
+    transition:200ms;
+    color:yellow;
+    font-size:20px;
 }
