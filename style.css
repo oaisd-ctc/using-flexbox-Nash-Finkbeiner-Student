@@ -31,7 +31,7 @@ it to the center while appling a transition to it so when ever it moves back to 
     justify-content:center;
     transition:2s;
 }
-/* This is the main hover system which is used to make it so the items in container 1 grow, change color of the box, and change the color of the text. */
+/* This is the main hover system which is used to make it so the items in container 1 grow, change color of the box, and change the color of the text when hovered over by the mouse. */
 #con>div:hover{
     background-color:blue;
     height:50px;
